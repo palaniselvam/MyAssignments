@@ -1,0 +1,36 @@
+// Function to reverse a string
+function reverseString(str) {
+    let characters = str.split("");
+    //split strings 
+    console.log(characters)
+    let reversedString = "";
+
+
+    // Find charaters Length starts from '0'
+    console.log(characters.length)
+    // Loop from the last character to the first
+    for (let i = characters.length - 1; i >= 0; i--) {
+        reversedString = reversedString + characters[i];
+    }
+
+    console.log("Reversed string: " + reversedString);
+
+    return reversedString;
+}
+
+// Function to check palindrome
+function isPalindrome(str) {
+    let reversedString = reverseString(str);
+
+    if (str === reversedString) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+// Test the function
+console.log("Is 'madam' a palindrome? " + isPalindrome("madam"));
+console.log("Is 'hello' a palindrome? " + isPalindrome("hello"));
+console.log("Is 'level' a palindrome? " + isPalindrome("level"));
+console.log("Is 'world' a palindrome? " + isPalindrome("world"));
